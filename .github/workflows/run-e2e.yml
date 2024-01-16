@@ -36,9 +36,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Cypress Install
-        run: cypress install
-
       - name: Cypress run
         uses: cypress-io/github-action@v6
         env:
