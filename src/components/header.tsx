@@ -1,7 +1,7 @@
 import { Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { Suspense } from "react";
 import { ShoppingCart } from "./shoppingCart";
 import { SearchForm } from "./searchForm";
 
@@ -13,7 +13,9 @@ export function Header() {
           digital.store
         </Link>
 
-        <SearchForm />
+        <Suspense fallback={null}>
+          <SearchForm />
+        </Suspense>
       </div>
       <div className="flex items-center gap-4">
         <ShoppingCart />
